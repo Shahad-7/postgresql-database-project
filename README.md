@@ -8,6 +8,12 @@ Includes: schema (DDL), seed data (DML)/CSV, ERD, and optional full backup.
 - `sql/seed.sql` – sample data (or CSVs in `data/`)
 - `docs/ERD.png` – ERD diagram
 - `backup/coffee_shop.full.backup` – full dump (optional)
+  
+> **Highlights**
+> - Normalized schema + FKs
+> - Reproducible seeding (SQL/CSV)
+> - Views + 1 materialized view
+> - ERD included • Run in < 60s
 
 ## Quick Start
 ### Option A — SQL files
@@ -20,4 +26,5 @@ Run in pgAdmin (Query Tool) in order:
 pg_restore -U postgres -h localhost -p 5432 -d coffee_shop --clean --if-exists --no-owner backup/coffee_shop.full.backup
 
 ![ERD](docs/ERD.png)
+
 
