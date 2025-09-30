@@ -11,8 +11,13 @@ Includes: schema (DDL), seed data (DML)/CSV, ERD, and optional full backup.
 
 ## Quick Start
 ### Option A — SQL files
-1. CREATE DATABASE coffee_shop;
-2. Run `sql/schema.sql`, then `sql/seed.sql` (أو استيراد CSV من `data/`).
-
+Run in pgAdmin (Query Tool) in order:
+1) sql/schema.sql
+2) sql/seed.sql   (or import CSVs from data/)
+3) sql/views.sql
+   
 ### Option B — Full backup
 pg_restore -U postgres -h localhost -p 5432 -d coffee_shop --clean --if-exists --no-owner backup/coffee_shop.full.backup
+
+![ERD](docs/ERD.png)
+
